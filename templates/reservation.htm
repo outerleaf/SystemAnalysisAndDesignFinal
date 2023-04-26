@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html land='en'>
+<head>
+	<meta charset='UTF-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewpoint' content='width=device-width, initial-scale=1.0'>
+	<title>Document</title>
+	<link href="{{ url_for('static', filename='stylesheet.css') }}" rel="stylesheet" />
+</head>
+<body>
+    <h1>Thank You for Your Interest in the Panther Hotel!</h1>
+	<form action='http://localhost:5000/reservation' method="POST">
+		<h2>Please Enter the Information for Your Stay:</h2>
+        <h3>First Name:</h3>
+		<p><input type='text' name='fname'></p>
+        <h3>Last Name:</h3>
+		<p><input type='text' name='lname'></p>
+        <h3>Check-In Date:</h3>
+        <p>(mm/dd/yyyy)</p>
+        <p><input type='text' name='checkin'></p>
+        <h3>Check-Out Date:</h3>
+        <p>(mm/dd/yyyy)</p>
+        <p><input type='text' name='checkout'></p>
+        <h3>Room Type:</h3>
+        <p>(Single, Double, or Suite)</p>
+        <p><input type='text' name='roomtype'></p>
+		<button><input type='submit' name='Submit' value="Submit"></button>
+	</form>
+</body>
+</html>
